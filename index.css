@@ -30,7 +30,7 @@
 body .lineTable:hover {
    background-color: #284A7E;
 }
-body .lineBlackout:hover{
+body .lineBlackout:hover {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -38,13 +38,14 @@ body .lineBlackout:hover{
 
 
 .typeOfFlight {
-	width: 10%
+	width: 10%;
 }
 .numberTerminal {
-	width: 2%
+	width: 2%;
 }
 #submitButton {
-	visibility: hidden ;
+	visibility: hidden;
 }
 #inputTel:valid + #inputEmail:valid ~ #submitButton {
 	visibility: visible;
+}
