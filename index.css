@@ -1,0 +1,50 @@
+.lineTable {
+    border: 1px solid #60A1A4;    
+    padding: 0px;
+    border-collapse: collapse;
+    background: #61D6DB;
+   height: 40px;
+}
+ 
+
+.lineTable:nth-child(2n+1) {
+    background-color: #A5EAED;
+}
+
+
+.lineTable li {
+	display: inline;
+	width: 50px;
+	padding: 10px;
+}
+
+.lineBlackout {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 500px;
+	width:  100px;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 1;
+}
+body .lineTable:hover {
+   background-color: #284A7E;
+}
+body .lineBlackout:hover{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.typeOfFlight {
+	width: 10%
+}
+.numberTerminal {
+	width: 2%
+}
+#submitButton {
+	visibility: hidden ;
+}
+#inputTel:valid + #inputEmail:valid ~ #submitButton {
+	visibility: visible;
