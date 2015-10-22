@@ -1,51 +1,90 @@
-.lineTable {
-    border: 1px solid #60A1A4;    
-    padding: 0px;
-    border-collapse: collapse;
-    background: #61D6DB;
-   height: 40px;
+.aviaTable {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-width: 1000px;
+    position: relative;
+    background-color: rgba(97, 214, 109, 0.5);
 }
- 
+.lineTable {
+    width: 100%;
+    display: none;
+}
+
+.aviaTable .lineTable:first-child {
+    background-color: #fff;
+}
 
 .lineTable:nth-child(2n+1) {
-    background-color: #A5EAED;
+    background-color: rgba(97, 214, 109, 0.5);
+}
+.cell {
+    width: 11%;
+    height: 60px;
+    float: left;
 }
 
 
-.lineTable li {
-	display: inline;
-	width: 50px;
-	padding: 10px;
+.lineTable:hover .cell:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width:  120px;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: -1;
 }
-
-.lineBlackout {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	height: 500px;
-	width:  100px;
-	background-color: rgba(0, 0, 0, 0);
-	z-index: 1;
-}
-body .lineTable:hover {
-   background-color: #284A7E;
-}
-body .lineBlackout:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+.lineTable:hover {
+    background-color: rgba(255, 255, 255, 1) !important;
 }
 
 
-
-
-.typeOfFlight {
-	width: 10%;
+/*Поиск по городам*/
+#inputCity {
+    width: 100%;
 }
-.numberTerminal {
-	width: 2%;
+#inputCity[value=""] ~ .lineTable {
+    display: flex;
 }
+
+#inputCity[value="Ираклион"] ~ .lineTable[aeroport="Ираклион"] {
+    display: flex;
+}
+#inputCity[value="Санкт-Петербург"] ~ .lineTable[aeroport="Санкт-Петербург"] {
+    display: flex;
+}
+#inputCity[value="Сочи"] ~ .lineTable[aeroport="Сочи"] {
+    display: flex;
+}
+#inputCity[value="Абакан"] ~ .lineTable[aeroport="Абакан"] {
+    display: flex;
+}
+#inputCity[value="Ракка"] ~ .lineTable[aeroport="Ракка"] {
+    display: flex;
+}
+
+/*Проверяющая форма*/
 #submitButton {
-	visibility: hidden;
+    visibility: hidden ;
 }
 #inputTel:valid + #inputEmail:valid ~ #submitButton {
-	visibility: visible;
+    visibility: visible;
+}
+
+#terminalA:checked ~ .lineTable:not([numberTerminal="A"]) {
+    display: none;
+}
+#terminalB:checked ~ .lineTable:not([numberTerminal="B"]) {
+    display: none;
+}
+#terminalC:checked ~ .lineTable:not([numberTerminal="C"]) {
+    display: none;
+}
+#terminalD:checked ~ .lineTable:not([numberTerminal="D"]) {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
 }
