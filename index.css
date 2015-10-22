@@ -1,4 +1,5 @@
-.aviaTable {
+.aviaTable
+{
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
@@ -6,85 +7,115 @@
     position: relative;
     background-color: rgba(97, 214, 109, 0.5);
 }
-.lineTable {
+
+.lineTable
+{
     width: 100%;
     display: none;
 }
 
-.aviaTable .lineTable:first-child {
+.aviaTable .lineTable:first-child
+{
     background-color: #fff;
 }
 
-.lineTable:nth-child(2n+1) {
+.lineTable:nth-child(2n+1)
+{
     background-color: rgba(97, 214, 109, 0.5);
 }
-.cell {
+
+.cell
+{
     width: 11%;
     height: 60px;
     float: left;
 }
 
-
-.lineTable:hover .cell:hover:before {
+.lineTable:hover .cell:hover:before
+{
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
     height: 100%;
     width:  120px;
     background-color: rgba(0, 0, 0, 1);
     z-index: -1;
 }
-.lineTable:hover {
+
+.lineTable:hover
+{
     background-color: rgba(255, 255, 255, 1) !important;
 }
 
 
 /*Поиск по городам*/
-#inputCity {
+.inputCity
+{
     width: 100%;
 }
-#inputCity[value=""] ~ .lineTable {
+
+.inputCity[value=""] ~ .lineTable
+{
     display: flex;
 }
 
-#inputCity[value="Ираклион"] ~ .lineTable[aeroport="Ираклион"] {
+.inputCity[value="Ираклион"] ~ .lineTable[aeroport="Ираклион"],
+{
     display: flex;
 }
-#inputCity[value="Санкт-Петербург"] ~ .lineTable[aeroport="Санкт-Петербург"] {
+
+.inputCity[value="Санкт-Петербург"] ~ .lineTable[aeroport="Санкт-Петербург"]
+{
     display: flex;
 }
-#inputCity[value="Сочи"] ~ .lineTable[aeroport="Сочи"] {
+
+.inputCity[value="Сочи"] ~ .lineTable[aeroport="Сочи"]
+{
     display: flex;
 }
-#inputCity[value="Абакан"] ~ .lineTable[aeroport="Абакан"] {
+
+.inputCity[value="Абакан"] ~ .lineTable[aeroport="Абакан"]
+{
     display: flex;
 }
-#inputCity[value="Ракка"] ~ .lineTable[aeroport="Ракка"] {
+
+.inputCity[value="Ракка"] ~ .lineTable[aeroport="Ракка"]
+{
     display: flex;
 }
 
 /*Проверяющая форма*/
-#submitButton {
+.submitButton
+{
     visibility: hidden ;
 }
-#inputTel:valid + #inputEmail:valid ~ #submitButton {
+
+.inputTel:valid + .inputEmail:valid ~ .submitButton
+{
     visibility: visible;
 }
 
-#terminalA:checked ~ .lineTable:not([numberTerminal="A"]) {
-    display: none;
-}
-#terminalB:checked ~ .lineTable:not([numberTerminal="B"]) {
-    display: none;
-}
-#terminalC:checked ~ .lineTable:not([numberTerminal="C"]) {
-    display: none;
-}
-#terminalD:checked ~ .lineTable:not([numberTerminal="D"]) {
+.terminalA:checked ~ .lineTable:not([numberTerminal="A"])
+{
     display: none;
 }
 
-.hidden {
+.terminalB:checked ~ .lineTable:not([numberTerminal="B"])
+{
+    display: none;
+}
+
+.terminalC:checked ~ .lineTable:not([numberTerminal="C"])
+{
+    display: none;
+}
+
+.terminalD:checked ~ .lineTable:not([numberTerminal="D"])
+{
+    display: none;
+}
+
+.hidden
+{
     visibility: hidden;
 }
