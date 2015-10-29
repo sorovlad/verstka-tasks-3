@@ -12,42 +12,42 @@
                 type="text"
                 placeholder="Город отправления"
                 value=""
-                id="inputCity"
+                class="inputCity"
                 onkeyup="this.setAttribute('value', this.value)">
             
-            <input type="radio" name="type" id="terminalAll">All
-            <input type="radio" name="type" id="terminalA">A
-            <input type="radio" name="type" id="terminalB">B
-            <input type="radio" name="type" id="terminalC">C   
-            <input type="radio" name="type" id="terminalD">D
-            
-            <input id="inputCity" class="hidden">
+            <label for="terminalAll">All</label>
+            <input type="radio" name="type" class="terminalAll">
+            <label for="terminalA">A</label>
+            <input type="radio" name="type" class="terminalA">
+            <label for="terminalB">B</label>
+            <input type="radio" name="type" class="terminalB">
+            <label for="terminalC">C</label>
+            <input type="radio" name="type" class="terminalC">
+            <label for="terminalD">D</label>
+            <input type="radio" name="type" class="terminalD">
+
+            <input class="inputCity hidden">
 
             <div class="lineTable"></div>
-            <div class="cell typeOfFlight">Тип рейса</div>
-            <div class="cell numberFlight">Номер рейса</div>
-            <div class="cell airline">Авиакомпания</div>
-            <div class="cell logoAirline">логотип авиакомпании</div>
-            <div class="cell typeAircraft">тип воздушного судна</div>
-            <div class="cell aeroport">аэропорт назначения</div>
-            <div class="cell scheduleTime">плановое время вылета или прилёта</div>
-            <div class="cell numberTerminal">номер терминала</div>
-            <div class="cell flightStatus">статус рейса</div>
-        
-            <div class="lineTable" 
-                aeroport="Санкт-Петербург" 
-                typeOfFlight=""
-                numberFlight="JU 8153"
-                airline=""
-                logoAirline=""
-                typeAircraft="Boeing B787 «Dreamliner»"
-                scheduleTime="2 окт,00:05"
-                numberTerminal="D"
-                flightStatus="совершил посадку в 01:56">
-                <div class="cell typeOfFlight"></div>
+            <div class="cell header">Тип рейса</div>
+            <div class="cell header">Номер рейса</div>
+            <div class="cell header">Авиакомпания</div>
+            <div class="cell header">Логотип авиакомпании</div>
+            <div class="cell header">Тип воздушного судна</div>
+            <div class="cell header">Аэропорт назначения</div>
+            <div class="cell header">плановое время вылета или прилёта</div>
+            <div class="cell header numberTerminal">Номер терминала</div>
+            <div class="cell header">Статус рейса</div>
+
+            <div class="lineTable"
+                aeroport="Санкт-Петербург"
+                numberTerminal="D">
+                <div class="cell typeOfFlight">Вылет</div>
                 <div class="cell numberFlight">JU 8153</div>
-                <div class="cell airline">Авиакомпания</div>
-                <div class="cell logoAirline"></div>
+                <div class="cell airline">Аэрофлот</div>
+                <div class="cell logoAirline">
+                    <img src="aeroflot.jpg" alt="aeroflot">
+                </div>
                 <div class="cell typeAircraft">Boeing B787 «Dreamliner»</div>
                 <div class="cell aeroport">Санкт-Петербург</div>
                 <div class="cell scheduleTime">2 окт,00:05</div>
@@ -57,18 +57,13 @@
 
             <div class="lineTable" 
                 aeroport="Санкт-Петербург" 
-                typeOfFlight=""
-                numberFlight="JU 8153"
-                airline=""
-                logoAirline=""
-                typeAircraft="Boeing B787 «Dreamliner»"
-                scheduleTime="2 окт,00:05"
-                numberTerminal="A"
-                flightStatus="совершил посадку в 01:56">
-                <div class="cell typeOfFlight"></div>
+                numberTerminal="A">
+                <div class="cell typeOfFlight">Вылет</div>
                 <div class="cell numberFlight">JU 8153</div>
-                <div class="cell airline">Авиакомпания</div>
-                <div class="cell logoAirline"></div>
+                <div class="cell airline">Airfrance</div>
+                <div class="cell logoAirline">
+                    <img src="airfrance.png" alt="airfrance">
+                </div>
                 <div class="cell typeAircraft">Boeing B787 «Dreamliner»</div>
                 <div class="cell aeroport">Санкт-Петербург</div>
                 <div class="cell scheduleTime">2 окт,00:05</div>
@@ -77,19 +72,14 @@
             </div>
 
             <div class="lineTable" 
-                aeroport="Сочи" 
-                typeOfFlight="fsa"
-                numberFlight="2303"
-                airline="Aeroflot"
-                logoAirline=""
-                typeAircraft="Boeing757-200"
-                scheduleTime="22:50"
-                numberTerminal="D"
-                flightStatus="отменен">
-                <div class="cell typeOfFlight"></div>
+                aeroport="Сочи"
+                numberTerminal="D">
+                <div class="cell typeOfFlight">Прилет</div>
                 <div class="cell numberFlight">2303</div>
                 <div class="cell airline">Aeroflot</div>
-                <div class="cell logoAirline"></div>
+                <div class="cell logoAirline">
+                    <img src="aeroflot.jpg" alt="aeroflot">
+                </div>
                 <div class="cell typeAircraft">Boeing757-200</div>
                 <div class="cell aeroport">Сочи</div>
                 <div class="cell scheduleTime">22:50</div>
@@ -99,40 +89,51 @@
 
             <div class="lineTable" 
                 aeroport="Ракка" 
-                typeOfFlight="Вылет"
-                numberFlight="2303"
-                airline="ВКС"
-                logoAirline=""
-                typeAircraft="Су-34"
-                scheduleTime="22:50"
-                numberTerminal="C"
-                flightStatus="В пути">
+                numberTerminal="C">
                 <div class="cell typeOfFlight">Вылет</div>
                 <div class="cell numberFlight">349</div>
                 <div class="cell airline">ВКС</div>
-                <div class="cell logoAirline"></div>
+                <div class="cell logoAirline">
+                    <img src="vks.jpg" alt="vks">
+                </div>
                 <div class="cell typeAircraft">Су-34</div>
                 <div class="cell aeroport">Ракка</div>
                 <div class="cell scheduleTime">22:50</div>
                 <div class="cell numberTerminal">C</div>
                 <div class="cell flightStatus">В пути</div>
             </div>
-        
+
+            <div class="lineTable" 
+                aeroport="Абакан"
+                numberTerminal="E">
+                <div class="cell typeOfFlight">Прилет</div>
+                <div class="cell numberFlight">2040</div>
+                <div class="cell airline">Antalia</div>
+                <div class="cell logoAirline">
+                    <img src="alitalia.jpg" alt="antalia">
+                </div>
+                <div class="cell typeAircraft">Boeing757-200</div>
+                <div class="cell aeroport">Анталия</div>
+                <div class="cell scheduleTime">22:50</div>
+                <div class="cell numberTerminal">D</div>
+                <div class="cell flightStatus">В пути</div>
+            </div>
+            
         </div>
         <form meliod="post" action="#">
         <input
             type="tel"
             placeholder="Телефон"
             pattern="(\+?\d[- .]*){7,13}"
-            id="inputTel"
+            class="inputTel"
             required>
         <input
             type="email"
             placeholder="Email"
             pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-            id="inputEmail"
+            class="inputEmail"
             required>
-        <button id="submitButton" type="submit">Отправить данные о рейсе на телефон</button>
+        <button class="submitButton" type="submit">Отправить данные о рейсе на телефон</button>
             </form>
 
     </body>
