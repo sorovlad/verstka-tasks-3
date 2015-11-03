@@ -14,7 +14,7 @@
                 value=""
                 class="inputCity"
                 onkeyup="this.setAttribute('value', this.value)">
-            
+
             <label for="terminalAll">All</label>
             <input type="radio" name="type" class="terminalAll">
             <label for="terminalA">A</label>
@@ -28,18 +28,18 @@
 
             <input class="inputCity hidden">
 
-            <div class="lineTable"></div>
-            <div class="cell header">Тип рейса</div>
-            <div class="cell header">Номер рейса</div>
-            <div class="cell header">Авиакомпания</div>
-            <div class="cell header">Логотип авиакомпании</div>
-            <div class="cell header">Тип воздушного судна</div>
-            <div class="cell header">Аэропорт назначения</div>
-            <div class="cell header">плановое время вылета или прилёта</div>
-            <div class="cell header numberTerminal">Номер терминала</div>
-            <div class="cell header">Статус рейса</div>
-
-            <div class="lineTable"
+            <div class="tHead">
+                <div class="cell header">Тип рейса</div>
+                <div class="cell header">Номер рейса</div>
+                <div class="cell header">Авиакомпания</div>
+                <div class="cell header">Логотип авиакомпании</div>
+                <div class="cell header">Тип воздушного судна</div>
+                <div class="cell header">Аэропорт назначения</div>
+                <div class="cell header">плановое время вылета или прилёта</div>
+                <div class="cell header numberTerminal">Номер терминала</div>
+                <div class="cell header">Статус рейса</div>
+            </div>
+            <div class="tr"
                 aeroport="Санкт-Петербург"
                 numberTerminal="D">
                 <div class="cell typeOfFlight">Вылет</div>
@@ -55,7 +55,7 @@
                 <div class="cell flightStatus">совершил посадку в 01:56</div>
             </div>
 
-            <div class="lineTable" 
+            <div class="tr" 
                 aeroport="Санкт-Петербург" 
                 numberTerminal="A">
                 <div class="cell typeOfFlight">Вылет</div>
@@ -71,7 +71,7 @@
                 <div class="cell flightStatus">совершил посадку в 01:56</div>
             </div>
 
-            <div class="lineTable" 
+            <div class="tr" 
                 aeroport="Сочи"
                 numberTerminal="D">
                 <div class="cell typeOfFlight">Прилет</div>
@@ -87,7 +87,7 @@
                 <div class="cell flightStatus">отменен</div>
             </div>
 
-            <div class="lineTable" 
+            <div class="tr" 
                 aeroport="Ракка" 
                 numberTerminal="C">
                 <div class="cell typeOfFlight">Вылет</div>
@@ -103,7 +103,7 @@
                 <div class="cell flightStatus">В пути</div>
             </div>
 
-            <div class="lineTable" 
+            <div class="tr" 
                 aeroport="Абакан"
                 numberTerminal="E">
                 <div class="cell typeOfFlight">Прилет</div>
@@ -118,23 +118,21 @@
                 <div class="cell numberTerminal">D</div>
                 <div class="cell flightStatus">В пути</div>
             </div>
-            
         </div>
-        <form meliod="post" action="#">
-        <input
-            type="tel"
-            placeholder="Телефон"
-            pattern="(\+?\d[- .]*){7,13}"
-            class="inputTel"
-            required>
-        <input
-            type="email"
-            placeholder="Email"
-            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-            class="inputEmail"
-            required>
-        <button class="submitButton" type="submit">Отправить данные о рейсе на телефон</button>
-            </form>
-
+        <form method="post" action="#">
+            <input
+                type="tel"
+                placeholder="Телефон"
+                pattern="(\+?\d[- .]*){7,13}"
+                class="inputTel"
+                required>
+            <input
+                type="email"
+                placeholder="Email"
+                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                class="inputEmail"
+                required>
+            <button class="submitButton" type="submit">Отправить данные о рейсе на телефон</button>
+        </form>
     </body>
 </html>

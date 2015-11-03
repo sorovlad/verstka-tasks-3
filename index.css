@@ -1,71 +1,57 @@
 .aviaTable
 {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: table;
     min-width: 1000px;
     position: relative;
     background-color: rgba(65 ,105 ,225, 0.5);
 }
-div
-{
-    text-align: left;
-}
 
-.lineTable
+.tr
 {
     width: 100%;
-    display: none;
 }
-.aviaTable .lineTable:first-child
+.tHead
 {
-    display: flex;
+    width: 100%;
+    display: table-row;
 }
 
-.aviaTable .lineTable:first-child
-{
-    /*background-color: black !important;*/
-}
-
-.lineTable:nth-child(2n+1)
+.tr:nth-child(2n+1)
 {
     background-color: rgba(65 , 105 ,225, 0.5);
 }
 
 .cell
 {
-    width: 11%;
+    width: 11.11%;
     height: 60px;
     float: left;
 }
 .header
 {
-    background-color: #6495ED;
+    background-color: #6495ed;
 }
 
-.lineTable:hover .cell:hover:before
+.tr:hover .cell:hover:before
 {
     content: '';
     position: absolute;
     top: 0;
     height: 100%;
-    width:  11%;
-    background-color: rgba(135, 206 ,206 , 1);
+    width: 11.11%;
+    background-color: #87ceff;
     z-index: -1;
 }
 img
 {
-    /*width: 80%;*/
-    /*height: 80%;*/
     max-width: 80%;
     max-height: 80%;
 }
 
-.lineTable:hover
+.tr:hover
 {
-    background-color: rgba(30 ,144 ,255, 1) !important;
+    background-color: #1e90ff !important;
 }
-
 
 /*Поиск по городам*/
 .inputCity
@@ -73,34 +59,14 @@ img
     width: 100%;
 }
 
-.inputCity[value=""] ~ .lineTable
+.inputCity[value=""] ~ .tr,
+.inputCity[value="Ираклион"] ~ .tr[aeroport="Ираклион"],
+.inputCity[value="Санкт-Петербург"] ~ .tr[aeroport="Санкт-Петербург"],
+.inputCity[value="Сочи"] ~ .tr[aeroport="Сочи"],
+.inputCity[value="Абакан"] ~ .tr[aeroport="Абакан"],
+.inputCity[value="Ракка"] ~ .tr[aeroport="Ракка"]
 {
-    display: flex;
-}
-
-.inputCity[value="Ираклион"] ~ .lineTable[aeroport="Ираклион"],
-{
-    display: flex;
-}
-
-.inputCity[value="Санкт-Петербург"] ~ .lineTable[aeroport="Санкт-Петербург"]
-{
-    display: flex;
-}
-
-.inputCity[value="Сочи"] ~ .lineTable[aeroport="Сочи"]
-{
-    display: flex;
-}
-
-.inputCity[value="Абакан"] ~ .lineTable[aeroport="Абакан"]
-{
-    display: flex;
-}
-
-.inputCity[value="Ракка"] ~ .lineTable[aeroport="Ракка"]
-{
-    display: flex;
+    display: table-row;
 }
 
 /*Проверяющая форма*/
@@ -114,22 +80,10 @@ img
     visibility: visible;
 }
 
-.terminalA:checked ~ .lineTable:not([numberTerminal="A"])
-{
-    display: none;
-}
-
-.terminalB:checked ~ .lineTable:not([numberTerminal="B"])
-{
-    display: none;
-}
-
-.terminalC:checked ~ .lineTable:not([numberTerminal="C"])
-{
-    display: none;
-}
-
-.terminalD:checked ~ .lineTable:not([numberTerminal="D"])
+.terminalA:checked ~ .tr:not([numberTerminal="A"]),
+.terminalB:checked ~ .tr:not([numberTerminal="B"]),
+.terminalC:checked ~ .tr:not([numberTerminal="C"]),
+.terminalD:checked ~ .tr:not([numberTerminal="D"])
 {
     display: none;
 }
